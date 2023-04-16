@@ -3,6 +3,8 @@ from PIL import Image
 import numpy as np
 import easyocr
 
+st.title("EasyOCR Demo V1")
+
 img_file_buffer = st.camera_input("Take a picture")
 
 if img_file_buffer is not None:
@@ -12,7 +14,7 @@ if img_file_buffer is not None:
 	# streamlit write "Full image"
 	st.write("Full image")
 	# show the image
-	st.image(image, use_column_width=True)
+	st.image(image, use_column_width=True) 
 
 	# create a streamlit slider to select the height from top
 	height_from_top_percent = st.slider("Height from top", 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1)
